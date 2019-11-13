@@ -1,22 +1,10 @@
 import React, {useState} from 'react'
 import {TextField, InputAdornment} from '@material-ui/core'
-// import clsx from 'clsx';
-// import AccountCircle from '@material-ui/icons/AccountCircle';
-import { makeStyles } from '@material-ui/core/styles'
 import SearchIcon from '@material-ui/icons/Search'
 import api from "../../services/Axios"
 import apiKey from "../../services/ApiKey"
 import Thumbnail from './thumbnail'
-import './style.css'
-
-const useStyles = makeStyles(theme => ({
-    margin: {
-        margin: theme.spacing(1),
-    },
-    textField: {
-        width: 400,
-    },
-}));
+import './index.css'
 
 const onScrollBottom = (f) => {
     window.onscroll = function(event) {
@@ -55,7 +43,6 @@ export default function Search(){
     const [search, setSearch] = useState('')
     ////STATES
 
-    const classes = useStyles();
 
     const submit = async function(event){
         event.preventDefault()
@@ -102,7 +89,7 @@ export default function Search(){
 
     return (
         <div className="row mt-5">
-            <form onSubmit={submit} className="center mb-5" id="animatedForm">
+            <form onSubmit={submit} className="center mb-5 col-12" id="animatedForm">
                     <TextField
                         className={"animated bounce delay-2 col-sm-12 col-md-6 mx-auto"}
                         id="input-with-icon-textfield"

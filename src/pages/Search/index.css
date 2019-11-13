@@ -14,7 +14,7 @@ form{
 
 .center {
     position:absolute;
-    top: 40vh;
+    top: 40vh; left: 0px;
     margin-top: auto;
     margin-bottom: auto;
     height: 0vh; /*requires explicit height*/
